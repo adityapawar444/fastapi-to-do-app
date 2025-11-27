@@ -1,1 +1,1 @@
-# fastapi-to-do-app-v0
+# Fastapi-to-do-app-v0
