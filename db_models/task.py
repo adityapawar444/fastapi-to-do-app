@@ -32,6 +32,10 @@ class Task(Base):
         String(64),
         nullable=False
     )
+    priority = Column(
+        String(64),
+        nullable=False
+    )
     is_deleted = Column(
         Boolean,
         server_default=text("0"),
@@ -47,4 +51,9 @@ class Task(Base):
         server_default=func.now(),
         onupdate=func.now(),
         nullable=False
+    )
+    due_by = Column(
+        DateTime,
+        server_default=text("DATE('now')"),
+        nullable=True
     )
